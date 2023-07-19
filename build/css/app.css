@@ -370,6 +370,60 @@ h4 {
   max-width: 800px;
 }
 
+.alinear-derecha {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.boton-amarillo {
+  background-color: #E08709;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 5rem/2;
+  display: inline-block;
+  border: none;
+}
+.boton-amarillo:hover {
+  background-color: #c77808;
+  cursor: pointer;
+}
+
+.boton-amarillo-block {
+  background-color: #E08709;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 5rem/2;
+  display: block;
+  border: none;
+}
+.boton-amarillo-block:hover {
+  background-color: #c77808;
+  cursor: pointer;
+}
+
+.boton-verde {
+  background-color: #71B100;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 5rem/2;
+  display: inline-block;
+  border: none;
+}
+.boton-verde:hover {
+  background-color: #619800;
+  cursor: pointer;
+}
+
+/**Inrfas de Usuario UI**/
 .no-webp .inicio {
   background-image: url(../img/header.jpg);
 }
@@ -413,6 +467,7 @@ h4 {
 .footer {
   padding: 5rem 0;
   background-color: #333333;
+  margin-bottom: 0;
 }
 .footer .contenedor-footer {
   padding-top: 5rem/2;
@@ -472,4 +527,209 @@ h4 {
 }
 .icono h3 {
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .contenedor-anuncios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+.anuncio {
+  background-color: #eeeeee;
+  border: 1px solid #c8c8c8;
+  margin-bottom: 2rem;
+}
+.anuncio .contenido-anuncio {
+  padding: 2rem;
+}
+.anuncio h3, .anuncio p {
+  margin: 0;
+}
+
+.precio {
+  color: #71B100;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.iconos-caracteristicas {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  max-width: 40rem;
+}
+.iconos-caracteristicas li {
+  flex: 1;
+  display: flex;
+}
+.iconos-caracteristicas li img {
+  flex: 0 0 3rem;
+  margin-right: 1rem;
+}
+.iconos-caracteristicas li p {
+  font-weight: 900;
+}
+
+.no-webp .imagen-contacto {
+  background-image: url("../img/encuentra.jpg");
+}
+
+.webp .imagen-contacto {
+  background-image: url("../img/encuentra.webp");
+}
+
+.imagen-contacto {
+  background-position: center center;
+  background-size: cover;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imagen-contacto h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #FFFFFF;
+}
+.imagen-contacto p {
+  font-size: 1.8rem;
+  color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .seccion-inferior {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 2rem;
+  }
+}
+.entrada-blog {
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .entrada-blog {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+  }
+}
+.entrada-blog:last-of-type {
+  margin-bottom: 0;
+}
+
+.informacion-meta span {
+  color: #E08709;
+}
+
+.texto-entrada a {
+  color: #000000;
+  margin-top: 2rem;
+  display: block;
+}
+@media (min-width: 768px) {
+  .texto-entrada a {
+    margin-top: 0;
+  }
+}
+.texto-entrada h4 {
+  margin: 0;
+  line-height: 1.4;
+}
+.texto-entrada h4::after {
+  content: "";
+  display: block;
+  width: 15rem;
+  height: 0.5rem;
+  background-color: #71B100;
+  margin-top: 1rem;
+}
+
+.testimonial {
+  background-color: #71B100;
+  font-size: 2.4rem;
+  padding: 2rem;
+  color: #FFFFFF;
+  border-radius: 2rem;
+}
+.testimonial blockquote {
+  padding-left: 5rem;
+  position: relative;
+}
+.testimonial blockquote::before {
+  content: "";
+  background-image: url("../img/comilla.svg");
+  background-repeat: no-repeat;
+  width: 6rem;
+  height: 8rem;
+  display: block;
+  position: absolute;
+  left: -2rem;
+}
+.testimonial p {
+  color: #FFFFFF;
+  text-align: right;
+}
+
+.forma-contacto {
+  margin-bottom: 2rem;
+}
+
+.formulario fieldset {
+  margin-bottom: 2rem;
+}
+.formulario p {
+  font-size: 1.4rem;
+  color: #333333;
+  margin: 2rem 0 0 0;
+}
+.formulario legend {
+  font-size: 1.4rem;
+  color: #333333;
+}
+.formulario label {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+}
+.formulario input:not([type=submit]),
+.formulario textarea,
+.formulario select {
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  background-color: #FFFFFF;
+  border: 1px solid #e1e1e1;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.formulario textarea {
+  height: 20rem;
+}
+.formulario .forma-contacto {
+  max-width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.formulario input[type=radio] {
+  margin: 0;
+  width: auto;
+}
+
+/** Paginas Internas**/
+@media (min-width: 768px) {
+  .contenido-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.texto-nosotros blockquote {
+  font-weight: 900;
+  font-size: 2.2rem;
+  margin: 0;
+  padding-left: 1rem 0 3rem 0;
 }
